@@ -7,28 +7,28 @@ function Movies() {
             <h4>Recommended for You</h4>
             <Content>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
                 <Wrap>
-                    <img src="/images/slider-badag.jpg" />
+                    <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6131/666131-h" />
                 </Wrap>
             </Content>
         </Container>
