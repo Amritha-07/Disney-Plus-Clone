@@ -8,7 +8,7 @@ function ImageSlider() {
     let settings = {
         dots: true,
         infinite: true,
-        sped: 500,
+        speed: 500,
         slidesToScroll: 1,
         autoplay: true
     }
