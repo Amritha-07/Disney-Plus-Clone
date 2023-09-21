@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import ImageSlider from './ImageSlider'
 import Viewers from './Viewers'
+import Movies from './Movies'
 
 function Home() {
     return (
         <Container>   
             <ImageSlider />
             <Viewers />
+            <Movies />
         </Container>
     )
 }
@@ -19,6 +21,7 @@ const Container = styled.main`
     padding: 0 calc(3.5vw + 5px);
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
     
     &:before {
         background: url("/images/home-background.png") center center / cover no-repeat fixed;
