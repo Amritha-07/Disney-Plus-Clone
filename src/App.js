@@ -13,8 +13,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="detail" element={<Detail />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </div>

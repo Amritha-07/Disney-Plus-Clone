@@ -19,6 +19,7 @@ const Home = () => {
         })
     }, [])
 
+
     return (
         <Container>   
             <ImageSlider />

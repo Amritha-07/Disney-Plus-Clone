@@ -1,39 +1,61 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
+import dbConfig from '../firebase';
 
 function Detail() {
+    const { id } = useParams();
+    const [ movie, setMovie ] = useState()
+
+    useEffect(() => {
+        dbConfig.collection("Movies")
+        .doc(id)
+        .get()
+        .then((doc) => {
+            if(doc.exists) {
+                setMovie(doc.data());
+            }
+            else {
+
+            }
+        })
+        
+    }, [id])
+    
+
     return (
         <Container>
-            <Background>
-                <img src="https://cdn.vox-cdn.com/thumbor/wJ71E7nJ_4Wj0btm5seEnHNJ4Xk=/0x0:4096x2304/1200x800/filters:focal(1973x1175:2627x1829)/cdn.vox-cdn.com/uploads/chorus_image/image/60190709/BO_RGB_s120_22a_cs_pub.pub16.318.0.jpg" />
-            </Background>
-            <ImageTitle>
-                <img src="" />
-            </ImageTitle>
-            <Controls>
-                <PlayButton>
-                    <img src="/images/play-icon-black.png"/>
-                    <span>Play</span>
-                </PlayButton>
-                <TrailerButton>
-                    <img src="/images/play-icon-white.png"/>
-                    <span>Trailer</span></TrailerButton>
-                <AddButton>
-                    <span>+</span>
-                </AddButton>
-                <GroupWatchButton>
-                    <img src="/images/group-icon.png" />
-                </GroupWatchButton>
-            </Controls>
-            <SubTitle>
-                2018 &#8226; 7m &#8226; Family, Fantasy, Kids, Animation
-            </SubTitle>
-            <Description>
-                The film is about an aging and lonely Chinese Canadian mother 
-                suffering from empty nest syndrome, who receives an unexpected 
-                second chance at motherhood when she makes a steamed bun (baozi) 
-                that comes to life.
-            </Description>
+            {movie && (
+                <>
+                    <Background>
+                        <img src={movie.BackgroundImg} />
+                    </Background>
+                    <ImageTitle>
+                        <img src={movie.TitleImg} />
+                    </ImageTitle>
+                    <Controls>
+                        <PlayButton>
+                            <img src="/images/play-icon-black.png"/>
+                            <span>Play</span>
+                        </PlayButton>
+                        <TrailerButton>
+                            <img src="/images/play-icon-white.png"/>
+                            <span>Trailer</span></TrailerButton>
+                        <AddButton>
+                            <span>+</span>
+                        </AddButton>
+                        <GroupWatchButton>
+                            <img src="/images/group-icon.png" />
+                        </GroupWatchButton>
+                    </Controls>
+                    <SubTitle>
+                        {movie.Genres}
+                    </SubTitle>
+                    <Description>
+                        {movie.Description}
+                    </Description>
+                </>
+            )}
         </Container>
     )
 }
