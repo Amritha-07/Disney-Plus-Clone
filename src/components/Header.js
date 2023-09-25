@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { auth, provider } from '../firebase'
 import styled from 'styled-components'
-import { useNavigate} from 'react-router-dom'
+import { NavLink, useNavigate} from 'react-router-dom'
 import { selectUserName, selectUserPhoto, setSignOut, setUserLogin } from '../features/user/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -21,7 +21,7 @@ function Header() {
                     photo: user.photoURL
                 }))
                 setUsers(user);
-                navigate("/");
+                navigate("/home");
             }
         })
     }, [])
@@ -35,7 +35,7 @@ function Header() {
                 email: user.email,
                 photo: user.photoURL
             }))
-            navigate("/");
+            navigate("/home");
         })
     }
 
@@ -43,7 +43,7 @@ function Header() {
         auth.signOut()
         .then(() => {
             dispatch(setSignOut());
-            navigate("/login");
+            navigate("/");
         })
 
     }
@@ -60,10 +60,13 @@ function Header() {
                 ) :
                 <>
                     <NavMenu>
+                        <NewNavLink to='/home'>
                         <a>
+                            
                             <img src="/images/home-icon.svg" />
                             <span>HOME</span>
                         </a>
+                        </NewNavLink>
                         <a>
                             <img src="/images/search-icon.svg" />
                             <span>SEARCH</span>
@@ -183,4 +186,9 @@ const LoginContainer = styled.div`
     flex: 1;
     display: flex;
     justify-content: flex-end;
+`
+
+const NewNavLink = styled(NavLink)`
+    text-decoration: none;
+    color: inherit;
 `
