@@ -92,7 +92,7 @@ const ImageTitle = styled.div`
     margin-top: 60px;
 
     img {
-        width: 100%;
+        width: 90%;
         height: 100;
         object-ft: contain;
     }
