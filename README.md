@@ -40,6 +40,14 @@ To download the code for this project, you can clone this GitHub repository usin
 
 ```git clone https://github.com/Amritha-07/Disney-Plus-Clone.git```
 
+To build Dependencies
+
+```npm install```
+
+or 
+
+```npm run build```
+
 To start the application
 
 ```npm start```
