@@ -50,7 +50,9 @@ function Header() {
 
     return (
         <Nav>
-            <Logo src="/images/logo.svg" />
+            <NewNavLink to='/home'>
+                <Logo src="/images/logo.svg" />
+            </NewNavLink>
             {
                 !userName ? 
                 (
